@@ -1,18 +1,21 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Account WebService
+The main idea is show you how to build a Web Service using apex. It's a task for trainee, so, in this case you will see a simple webservice with the following methods:
+- HttpGET
+- HttpPOST
+- HttpPATCH
+- HttpPUT
+- HttpDELETE
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+You will have access to the classes and their test classes with a cover of the 100%. I hope that you could enjoy it.
 
-## How Do You Plan to Deploy Your Changes?
+## How Do We Test Our WebService?
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+We'll test this webservice using Workbench of Salesforce with the following url reserved in the rest explorer /services/apexrest/api/Account/
 
-## Configure Your Salesforce DX Project
+## Http Methods Examples
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+- HttpGET: ![image](https://github.com/LeoM98/Account-WebService/assets/54753222/1c656c27-405b-4fe4-a291-d5e1319875f4). As you can see, you need to pass a parameter (recordId) into the uri to get the specific record.
+- HttpPOST: ![image](https://github.com/LeoM98/Account-WebService/assets/54753222/aecb34dc-9b53-455d-99e7-875954c818b9). For POST method you dont need pass a parameter, you need to build an specific body and send the request.
+- HttpPATCH: ![image](https://github.com/LeoM98/Account-WebService/assets/54753222/2828433b-5675-4466-b38e-0bfee28a9a55). PATCH method allow you modify an especific variable or field in your record.
+- HttpPUT: ![image](https://github.com/LeoM98/Account-WebService/assets/54753222/c2d563d2-f030-4513-a06a-bac0296eb1d6). PUT allow you update the entire record with the parameter that you are passing to the body.
+- HttpDELETE: ![image](https://github.com/LeoM98/Account-WebService/assets/54753222/04f77b60-93ec-417f-b525-91f33f84c09c). Finally, DELETE method allow you to delete the specific record.
